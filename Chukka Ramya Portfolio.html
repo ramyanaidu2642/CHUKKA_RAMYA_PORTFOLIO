@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<!-- saved from url=(0064)file:///C:/Users/HP/OneDrive/Desktop/Ramya_Chukka_Portfolio.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chukka Ramya Portfolio</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #06090d;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        h1 {
+            color: #007bff;
+        } 
+        h2 {
+            color: #090c0f;
+        }
+
+        h2 {
+            border-bottom: 2px solid #090c0f;
+            padding-bottom: 5px;
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 5px;
+        }
+
+        a {
+            color: #0d78e3;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+        .education-box {
+            display: none;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .education-box.active {
+            display: block;
+        }
+
+        .education-box:hover {
+            background-color: #f9f9f9;
+        }
+
+        .skills-box {
+            border: 1px solid #dad0d0;
+            padding: 5px;
+            border-radius: 2px;
+            margin-bottom: 5px;
+        }
+
+        .project-box, .experience-box {
+            border: 1px solid #ddd;
+            padding: 5px;
+            border-radius: 2px;
+            margin-bottom: 5px;
+        }
+
+        .project-box a, .experience-box a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .project-box a:hover, .experience-box a:hover {
+            text-decoration: underline;
+        }
+
+
+        .certification-box {
+            border: 1px solid #ddd;
+            padding: 5px;
+            border-radius: 2px;
+            margin-bottom: 5px;
+        }
+
+        .certification-box h3 {
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            margin-bottom: 10px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #05090d;
+            color: #fff;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Responsive Styles */
+        @media only screen and (max-width: 600px) {
+            section {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>PORTFOLIO</h1>
+        <p>CHUKKA RAMYA</p>
+    </header>
+
+    <section>
+        <h2>Introduction</h2>
+        <p>Hello, I'm Chukka Ramya, a passionate and dedicated individual looking for an opportunity to apply my expertise in the field of computers and make effective use 
+            of my technical skills to get the best out of myself as a Software engineer.  </p>
+    </section>
+
+    <section>
+        <h2>Resume Overview</h2>
+        <p>View my resume: <a href="file:///C:/Users/HP/Downloads/RAMYA_CHUKKA_RESUME.pdf" target="_blank">RAMYA_CHUKKA_RESUME</a></p>
+    </section>
+
+    <section>
+        <h2>Education Background</h2>
+
+        <!-- Buttons for Each Education Entry -->
+        <button onclick="showDetails(&#39;eduDetails1&#39;)">Graduation</button>
+        <button onclick="showDetails(&#39;eduDetails2&#39;)">Intermediate</button>
+        <button onclick="showDetails(&#39;eduDetails3&#39;)">Schooling</button>
+        <!-- Add more buttons as needed -->
+
+        <!-- Education Details 1 -->
+        <div class="education-box" id="eduDetails1">
+            <strong>Bachelor's in Engineering(BE) in CSE</strong><br>
+            <span>Matrusri Engineering College</span><br>
+            <span>Graduation Year: 2024</span><br>
+            <span>CGPA: 7.74</span>
+            <!-- Additional details can be placed here -->
+        </div>
+
+        <!-- Education Details 2 -->
+        <div class="education-box" id="eduDetails2">
+            <strong>Intermediate[MPC]</strong><br>
+            <span>Narayana Junior College</span><br>
+            <span>Completion Year: 2020</span><br>
+            <span>Percentage: 94.2</span>
+            <!-- Additional details can be placed here -->
+        </div>
+
+        <div class="education-box" id="eduDetails3">
+            <strong>High School</strong><br>
+            <span>Sai Siddartha High School</span><br>
+            <span>Completion Year: 2018</span><br>
+            <span>CGPA: 9.0</span>
+            <!-- Additional details can be placed here -->
+        </div>
+        <!-- Add more education details boxes as needed -->
+
+    </section>
+
+    <script>
+        function showDetails(eduDetailsId) {
+            var allDetails = document.querySelectorAll('.education-box');
+            allDetails.forEach(function (box) {
+                box.classList.remove('active');
+            });
+
+            var details = document.getElementById(eduDetailsId);
+            details.classList.add('active');
+        }
+    </script>
+
+
+    <script>
+        function toggleDetails(eduDetailsId) {
+            var details = document.getElementById(eduDetailsId);
+            details.style.display = (details.style.display === 'block') ? 'none' : 'block';
+        }
+    </script>
+
+    <section>
+        <h2>Technical Skills</h2>
+        
+        <div class="skills-box">
+            <h3>Programming Languages</h3>
+            <ul>
+                <li>Python</li>
+                <li>Java(Basic)</li>
+                <li>C</li>
+            </ul>
+        </div>
+
+        <div class="skills-box">
+            <h3>Web Technologies </h3>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Java Script</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2>Projects</h2>
+
+        <div class="project-box">
+            <h3>Project :  Automated Building Construction Permit Approval System</h3>
+            <p>The Automated Building Construction Permit Approval System introduces a digital platform, enabling applicants to submit permit requests seamlessly. Automated validation checks ensure document completeness, while GIS integration verifies zoning regulations. Workflow automation streamlines processing, real-time communication keeps stakeholders informed, and analytics provide insights for continuous improvement. Designed for regulatory compliance, the system prioritizes data security, offering increased convenience and transparency to all stakeholders involved in the building construction permit approval process.</p>
+            <p><strong>Skills Used:</strong><br>
+            <span>Web Development</span><br>
+            <span>Mobile App Development</span><br>
+            <span>Automation</span><br>
+            <span>GIS Integration</span><br>   
+            <span>Communication Technology</span><br>
+            <span>Analytics</span><br>
+            <span>Security and Compliance</span>
+            </p>
+            <p><strong>GitHub Repository:</strong> <a href="https://github.com/ramyanaidu2642/Building_permit_approval-app">Repository</a></p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Internship/Work Experience</h2>
+
+        <div class="experience-box">
+            <h3>Internship: Rail Nirman Nilayam</h3>
+            <p>As a frontend developer, I was in charge of designing and implementing the zoom and tooltip features for an interactive map. I created eye-catching tooltips that dynamically display pertinent data as a user interacts with them. In addition, I made sure that zoom features were integrated smoothly so that users could dynamically scale the map for an engaging and responsive experience. In order to ensure that tooltip content and dynamic data retrieval are synchronized, cooperation with the backend team was essential. I improved overall interactivity and user engagement by contributing to a technically sound and user-centric frontend through efficient problem-solving and documentation.</p>
+            <p><strong>Skills Used:</strong><br>
+            <span>HTML/CSS</span><br>
+            <span>JavaScript</span><br>
+            <span>Responsive Design</span><br>
+            <span>Collaboration</span><br>   
+            <span>Problem Solving</span><br>
+            <span>Communication</span><br>
+            <span>Adaptability</span>
+            </p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Certifications</h2>
+
+        <div class="certification-box">
+            <h3>ORACLE ACADEMY</h3>
+            <ul>
+                <li>Java Fundamental Course</li>
+                <li>Database Programming with SQL Course</li>
+            </ul>
+        </div>
+
+        <div class="certification-box">
+            <h3>CISCO</h3>
+            <ul>
+                <li>Networking Essentials</li>
+            </ul>
+        </div>
+
+        <div class="certification-box">
+            <h3>INTERNSHALA</h3>
+            <ul>
+                <li>Web Development</li>
+            </ul>
+        </div>
+
+        <div class="certification-box">
+            <h3>COURSERA</h3>
+            <ul>
+                <li>Python Programming Essentials</li>
+            </ul>
+        </div>
+
+    </section>
+
+
+
+    <footer>
+        <p>Contact: ramyanaidu2642@gmail.com | LinkedIn: <a href="https://www.linkedin.com/in/ramya-chukka-2899a6249">LinkedIn</a> | GitHub: <a href="https://github.com/ramyanaidu2642/Building_permit_approval-app">GitHub</a></p>
+    </footer>
+
+
+
+</body></html>
